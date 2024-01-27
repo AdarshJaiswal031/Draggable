@@ -9,9 +9,7 @@ const ImgEditing = () => {
   const [height, setHeight] = useState("0");
 
   useEffect(() => {
-    console.log(width);
     if (isOpen && data.element?.current && width !== "0" && width !== "") {
-      console.log("okasjhg", data.element.current.style.width);
       data.element.current.style.width = `${width}px`;
     }
   }, [isOpen, width, data.element]);

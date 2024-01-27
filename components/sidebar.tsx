@@ -8,11 +8,8 @@ import { useModal } from "./hooks/use-modal-store";
 import ImgEditing from "./sections/imgEditing";
 import { imgLinks } from "@/lib/allImages";
 const Sidebar = () => {
-  interface ImageLink {
-    id: number;
-    url: string;
-  }
-  const { isOpen, onClose, type, data } = useModal();
+  const { isOpen, onClose, type, data, startDownload, setDownload } =
+    useModal();
   const [isImgTab, setisImgTab] = useState(true);
 
   const handleOnDrag = (e: React.DragEvent, item: any) => {
@@ -22,12 +19,14 @@ const Sidebar = () => {
       e.dataTransfer.setData("imgUrl", item.url);
     } else if (tag == "h1" || tag == "h2" || tag == "p") {
       e.dataTransfer.setData("textCode", `${targetElement.outerHTML}`);
+    } else if (tag == "div") {
+      console.log(targetElement.outerHTML);
     }
   };
   const handleSave = () => {
-    const element = document.getElementById("websiteCode");
-    const htmlCode = element?.outerHTML;
-    console.log(htmlCode);
+    if (!startDownload) {
+      setDownload(true);
+    }
   };
   return (
     <>
@@ -45,6 +44,7 @@ const Sidebar = () => {
           />
           <Text
             onClick={() => {
+              setisImgTab(false);
               onClose();
             }}
             className={cn(
