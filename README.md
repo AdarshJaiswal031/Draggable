@@ -3,6 +3,8 @@
 - Techstack : nextjs, typescript, tailwind, and zustand
 - **Problem Solved** : No need to write code just drag and drop to build
 
+<img src="screenshots/draggable.gif" alt="Draggable">
+
 ## Features
 
 - After build see in new window
@@ -15,4 +17,5 @@
 ## Preview
 
 - Video Link :
--
+- <img src="screenshots/draggable_start.png" alt="Draggable Start">
+- <img src="screenshots/draggable_end.png" alt="Draggable End">
