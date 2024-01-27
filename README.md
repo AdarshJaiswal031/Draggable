@@ -16,6 +16,7 @@
 
 ## Preview
 
-- Video Link :
+- Video Link :https://drive.google.com/file/d/1UMisybhivy0Ul1TQ-3khXOOXlQ2_uW4m/view?usp=drive_link
+
 - <img src="screenshots/draggable_start.png" alt="Draggable Start">
 - <img src="screenshots/draggable_end.png" alt="Draggable End">
